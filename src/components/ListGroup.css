@@ -1,0 +1,732 @@
+.apple-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .apple-container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.apple-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #86868b;
+    margin: 0;
+}
+
+.list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #f5f5f7;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .list-form {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.lists-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .lists-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.list-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e1e1e3;
+    position: relative;
+}
+
+.list-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.list-card.active {
+    border-color: #0071e3;
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+    color: white;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.delete-list-button {
+    background: none;
+    border: none;
+    color: #ff3b30;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.delete-list-button:hover {
+    opacity: 1;
+    background: rgba(255, 59, 48, 0.1);
+}
+
+.list-card.active .delete-list-button {
+    color: white;
+}
+
+.apple-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #f5f5f7;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .apple-form {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .input-group {
+        flex-direction: row;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #86868b;
+    pointer-events: none;
+}
+
+.apple-input,
+.datetime-input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid #e1e1e3;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.apple-input:focus,
+.datetime-input:focus {
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+.apple-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-icon {
+    font-size: 20px;
+}
+
+.apple-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 113, 227, 0.2);
+}
+
+.list-container {
+    background: #f5f5f7;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.apple-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.apple-list-item {
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .apple-list-item {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.apple-list-item:last-child {
+    border-bottom: none;
+}
+
+.apple-list-item:hover {
+    background-color: #fafafa;
+    transform: translateX(5px);
+}
+
+.apple-list-item.active {
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+    color: white;
+}
+
+.item-content-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .item-header {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.item-content {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.item-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.datetime-display {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #86868b;
+    background: #f5f5f7;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.edit-datetime-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #0071e3;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+    background: rgba(0, 113, 227, 0.1);
+}
+
+.save-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 113, 227, 0.2);
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #ff3b30;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.remove-button:hover {
+    opacity: 1;
+    background: rgba(255, 59, 48, 0.1);
+}
+
+.apple-list-item.active .remove-button {
+    color: white;
+}
+
+.apple-list-item.active .edit-button {
+    color: white;
+}
+
+.apple-list-item.active .datetime-display {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Add smooth transitions */
+.apple-list-item {
+    transition: all 0.3s ease;
+}
+
+.edit-item-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .edit-item-group {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.edit-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e3;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.edit-input:focus {
+    border-color: #0071e3;
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+}
+
+.edit-item-group .datetime-input.edit {
+    min-width: 180px;
+    padding: 10px 15px;
+}
+
+.edit-item-group .save-button {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+/* Buttons */
+.apple-button,
+.save-button,
+.edit-button,
+.remove-button,
+.delete-list-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px; /* Minimum touch target size */
+}
+
+@media (max-width: 480px) {
+    .apple-button,
+    .save-button,
+    .edit-button,
+    .remove-button,
+    .delete-list-button {
+        width: 100%;
+    }
+}
+
+/* Touch optimizations */
+@media (hover: none) {
+    .apple-list-item:hover {
+        transform: none;
+    }
+    
+    .list-card:hover {
+        transform: none;
+    }
+    
+    .apple-button:hover,
+    .save-button:hover,
+    .edit-button:hover,
+    .remove-button:hover,
+    .delete-list-button:hover {
+        transform: none;
+    }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .apple-button,
+    .save-button,
+    .edit-button,
+    .remove-button,
+    .delete-list-button {
+        min-height: 48px;
+        padding: 12px 24px;
+        font-size: 17px;
+        touch-action: manipulation;
+    }
+
+    /* Better input handling */
+    .apple-input,
+    .datetime-input,
+    .edit-input {
+        font-size: 17px;
+        padding: 14px 16px;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Prevent zoom on input focus */
+    input[type="text"],
+    input[type="datetime-local"] {
+        font-size: 16px;
+    }
+
+    /* Improve list item spacing */
+    .apple-list-item {
+        padding: 16px;
+        margin-bottom: 8px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Better action button placement */
+    .item-actions {
+        margin-top: 12px;
+        justify-content: flex-end;
+    }
+
+    /* Improve list card layout */
+    .list-card {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    /* Better form layout */
+    .apple-form,
+    .list-form {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    /* Improve header spacing */
+    .header-section {
+        margin-bottom: 24px;
+    }
+
+    .apple-title {
+        font-size: 28px;
+        margin-bottom: 4px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    /* Better datetime display */
+    .datetime-display {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Improve edit mode */
+    .edit-item-group {
+        gap: 12px;
+    }
+
+    /* Add safe area insets for notched devices */
+    .apple-container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+        padding-bottom: max(15px, env(safe-area-inset-bottom));
+    }
+
+    /* Improve scrolling behavior */
+    .list-container {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+
+    /* Better button feedback */
+    .apple-button:active,
+    .save-button:active,
+    .edit-button:active,
+    .remove-button:active,
+    .delete-list-button:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    /* Improve list selection */
+    .list-card.active {
+        transform: scale(1.02);
+    }
+
+    /* Better input focus states */
+    .apple-input:focus,
+    .datetime-input:focus,
+    .edit-input:focus {
+        box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+    }
+
+    /* Improve accessibility */
+    .apple-button,
+    .save-button,
+    .edit-button,
+    .remove-button,
+    .delete-list-button {
+        -webkit-tap-highlight-color: rgba(0, 113, 227, 0.1);
+    }
+
+    /* Better list item interaction */
+    .apple-list-item {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Improve datetime picker */
+    input[type="datetime-local"] {
+        min-height: 48px;
+    }
+
+    /* Better spacing for stacked elements */
+    .input-group {
+        gap: 12px;
+    }
+
+    /* Improve button icons */
+    .button-icon {
+        font-size: 20px;
+    }
+
+    /* Better list card interaction */
+    .list-card {
+        -webkit-tap-highlight-color: rgba(0, 113, 227, 0.1);
+    }
+
+    /* Improve form validation */
+    .apple-input:invalid,
+    .datetime-input:invalid,
+    .edit-input:invalid {
+        border-color: #ff3b30;
+    }
+
+    /* Better placeholder text */
+    .apple-input::placeholder,
+    .datetime-input::placeholder,
+    .edit-input::placeholder {
+        color: #86868b;
+        opacity: 0.8;
+    }
+}
+
+/* AI Overview Section */
+.ai-overview {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+    border: 1px solid #e1e1e3;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(45deg, #0071e3, #42a1ec);
+}
+
+.ai-overview-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ai-overview-icon {
+    font-size: 20px;
+    color: #0071e3;
+}
+
+.ai-overview-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.ai-overview-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #515154;
+}
+
+.ai-overview-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #86868b;
+    font-size: 14px;
+}
+
+.ai-overview-loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e1e1e3;
+    border-top-color: #0071e3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile optimizations for AI overview */
+@media (max-width: 768px) {
+    .ai-overview {
+        padding: 12px;
+        margin-top: 16px;
+    }
+
+    .ai-overview-header {
+        margin-bottom: 8px;
+    }
+
+    .ai-overview-title {
+        font-size: 15px;
+    }
+
+    .ai-overview-content {
+        font-size: 13px;
+    }
+}
+
+/* Keep all other existing styles */ 
