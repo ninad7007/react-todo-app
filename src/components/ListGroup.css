@@ -124,46 +124,23 @@
 .apple-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 20px;
     background: #f5f5f7;
-    padding: 15px;
+    padding: 16px;
     border-radius: 15px;
-}
-
-@media (min-width: 768px) {
-    .apple-form {
-        flex-direction: row;
-        align-items: center;
-    }
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    flex: 1;
-}
-
-@media (min-width: 768px) {
-    .input-group {
-        flex-direction: row;
-    }
+    gap: 12px;
+    width: 100%;
 }
 
 .input-wrapper {
     position: relative;
-    flex: 1;
-}
-
-.input-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #86868b;
-    pointer-events: none;
+    width: 100%;
 }
 
 .apple-input,
@@ -179,36 +156,63 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    box-sizing: border-box;
 }
 
-.apple-input:focus,
-.datetime-input:focus {
-    border-color: #0071e3;
-    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #86868b;
+    pointer-events: none;
 }
 
 .apple-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 15px 25px;
+    width: 100%;
+    padding: 12px 20px;
     background: linear-gradient(45deg, #0071e3, #42a1ec);
     color: white;
     border: none;
     border-radius: 12px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 8px;
 }
 
-.button-icon {
-    font-size: 20px;
-}
+/* Desktop styles */
+@media (min-width: 768px) {
+    .apple-form {
+        flex-direction: row;
+        align-items: flex-end;
+    }
 
-.apple-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 113, 227, 0.2);
+    .input-group {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .input-wrapper {
+        flex: 1;
+    }
+
+    .datetime-input {
+        min-width: 200px;
+        max-width: 250px;
+    }
+
+    .apple-button {
+        width: auto;
+        min-width: 120px;
+        margin-top: 0;
+    }
 }
 
 .list-container {
